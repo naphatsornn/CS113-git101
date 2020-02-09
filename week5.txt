@@ -1,0 +1,74 @@
+function2
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int 1;
+    srand(10);
+    for(i=0 i<10 ;i++)
+    printf("%d\n",rand()%6+1);
+}
+2
+5
+3
+6
+1
+6
+6
+2
+6
+6
+
+#include <stdio.h>
+void g (int x)
+{
+    if (x==0)
+    printf("0");
+    else {
+        pritnf("%d ,x);
+        g(x-1);
+        pritnf("%d",x);
+    }
+}
+
+int main (){
+    g(5)
+}
+ans: 54321012345
+
+#include <stdio.h>
+int x =8;
+int f(int x)
+{
+    x=2*x;
+    printf("%d",x);
+}
+int nain(){
+    f(x);
+    printf("%d",x);
+}
+ans: 16 16
+
+#include <stdio.h>
+
+int main()
+
+{
+    char i='0' ,j ='i'
+    char k;
+    k=i && j ;
+    printf("%d\n",k);
+
+}
+ans: 1
+
+#include <stdio.h>
+int main()
+{
+    int x =0123,y=4567;
+    int z;
+    z=++x+y++;
+    printf("z=%d\n",z);
+}
+ans: z=4651
