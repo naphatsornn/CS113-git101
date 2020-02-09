@@ -1,0 +1,42 @@
+functions 
+int ___(ตัวแปร){
+    statement
+}
+
+ถ้าต้องใช้ฟังก์ชันใน math library ต้องใช้ #include <math.h> เพิ่มเข้าไปด้วย
+ตัวอย่างฟังก์ชันใน math library 
+sin() , cos(), sqrt(), log(), pow(), exp(), floor(), ceil(), fmod()
+#include <stdio.h>
+#include <math.h>
+int main () {
+    float a,b,c ;
+    a=13.0
+    b=3.0
+    c=4.0
+
+    printf("a+b*c=%.2f\n",sqrt(c+d*f));
+}
+ans :a+b*c = 5.00
+
+return
+
+#include <stdio.h>
+long triple (long val)
+{
+    return 3*val;
+}
+long square (long val)
+{
+    return val* val;
+}
+long cube (long val ){
+    return val *val*val;
+}
+int main (){
+    long answer , my_value ;
+
+    my_value =21;
+    answer =triple(squar(cube(my_value)));
+    printf("Answer =%ld\n",answer);
+}
+
