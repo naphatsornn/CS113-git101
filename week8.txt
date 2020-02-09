@@ -1,0 +1,74 @@
+
+linked lists
+เป็นโครงสร้างของข้อมูลที่ถูกออกแบบมาใช้เก็บข้อมูล โดยแต่ละข้อมูลจะเชื่อมโยงต่อกันเป็นสาย เพื่อให้ผู้ใช้เข้าถึงข้อมูลแต่ละตัว  แต่array ข้อมูลจะเรียงต่อกัน ดังนั้น array กับ linked lists ไม่เหมือนกันซะทีเดียว
+
+structure student{
+char id[12];
+char name [40] ;
+int age ;
+}
+ประกาศตัวแปร ที่มีโครงสร้าง structure ดังนี้
+struct student std;
+โดยที่ std เป็นตัวแปรตามโครงสร้าง struct student
+
+การเข้าถึงสมาชิก แต่ละฟิลด์ของ structure ทำได้โดนใช้ dotoperator 
+std.age=21;
+ 
+การเข้าถึงสมาขิกแต่ละฟิลด์ผ่าวตัวแปร แต่ละฟิลด์ผ่านตัวแปร poiter 
+
+
+struck student std , * p_std;  P_std & std;  
+p_std =&std;
+ printf ("% s \ n", (* p_std) .name);  
+(* p_std) .age =21;
+
+การใช้ typedef
+
+กำหนดประเภทข้อมูลขึ้นมาเพิ่มเติม โดยใช้ typedef
+typedef unsigned long int ulint;
+
+typedef struct student {
+char id[12];
+char name [40];
+int age ;
+}
+student ;
+
+self-referential structures
+ เป็นstruct ที่อ้างกลับไปยังโครงสร้างตนเอง
+
+struct node {
+int data;
+struct node *next;
+};
+มักใช้คำว่า node ออกแบบมาเพื่อเก็บข้อมูล1หน่วย
+เช่นถ้ามีข้อมูล10ตัว มักใช้node10node ในการเก็บข้อมูล
+
+#include <stdio.h> 
+#include <stdlib.h>
+struct node { 
+    int data;
+    struct node *next; };
+int main()
+{ 
+    struct node *head = NULL;
+    struct node *first = NULL; 
+    struct node *second = NULL;
+    struct node *third = NULL;
+ 
+    // Allocate 3 nodes in the heap
+
+    first = (struct node *)malloc(sizeof(struct node)); 
+    second = (struct node *)malloc(sizeof(struct node));
+    third = (struct node *)malloc(sizeof(struct node));
+
+    head = first; 
+    first->data = 17;
+    first->next = second;
+ 
+    second->data = 29;
+    second->next = third;
+
+    third->data = 93;
+    third->next = NULL; 
+}
