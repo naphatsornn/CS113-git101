@@ -1,0 +1,40 @@
+control flow
+-else if
+if ()
+statement 1
+else if ()
+statement 2
+else if ()
+statement 3
+else
+statement 4
+
+-loop : while และ for
+while (expression)
+statement
+//ถ้าใน expression เป็นจริง statement จะถูกทำงาน จนกว่า expression เป็นเท็จ
+
+for(expr1 ; expr2;expr3)
+statement 
+เช่น
+for (int x=1;x<=5; x++)
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char name = getchar();
+    if (name >= 'a' && name <= 'z')
+    {
+        printf("Output: lower case");
+    }else if (name >= 'A' && name <= 'Z')
+    {
+        printf("Output: upper case");
+    }else if (name >= '0' && name <= '9')
+    {
+        printf("Output: digit");
+    }else
+    {
+        printf("Output: others");
+    }
+}
