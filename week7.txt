@@ -1,0 +1,78 @@
+#include <stdio.h>
+//void addTen(int number[],int n)
+void addTen(int*number,int n)
+{
+    //int number[] ={1,2,3,4,5};
+    //number=00
+    //i=0
+    //i=1 number+1=04
+    for (int i=0;i<n;i++){
+        printf("addTen [%p]=%d\n", number +i , *(number);
+        *(number+i) +=10;
+
+    }
+}
+int addTwenty(int*n){
+    *n=*n+20;
+    return 1;
+    return 1;
+}
+int main ()
+{
+    int n =5;
+    int number []={1,2,3,4,5};
+    addTen(number,n);
+    //addTen(&number[0],n);
+    for (int i=i=0;i<n;i++);
+    {
+        printf("[%p] = "%d\n", &number[i],number[i]);
+    }
+    addTwenty(%n);
+    printf("n=%d\n",n);
+}
+
+poitet
+
+การเขียนโค้ดให้ตัวแปรพ้อยเตอร์ p อ้างอิงไปถึงตำแหน่งในหน่งยความจำที่เก็บค่าของตัวแปร c สามารถเขียนได้ดังนี้
+int c;
+int *p;
+
+p=&c;
+
+poiter operators 
+1. & address operators 
+p=&c;
+
+2. * derefrencing operator 
+
+#include <stdio.h>
+int main(){
+    int c=5;
+    int*p;
+
+    p=&c;
+    printf("c=%d\n",c);
+    printf("*p=%d\n",*p);
+}
+ans: c=5
+*p=5
+
+#include <stdio.h>
+void action (double (*pfunc)(int,float),int x , float y)
+{
+    printf("return %lf\n", (*pfunc)(x,y));
+}
+double f1 (int x ,float ){
+    return x+y ;
+}
+double f2 (int x, float y)
+{
+    return x*y ;
+}
+int main (){
+    action (f1,3,2.5);
+    action (f2,3,2.5);
+
+}
+ans: return 5.500000
+return 7.500000
