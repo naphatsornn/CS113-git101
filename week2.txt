@@ -1,0 +1,81 @@
+tpye ,operators, expressions
+#include <stdio.h>
+int main(){
+   int x=10 // เป็นการประกาศตัวแปรว่า x มีค่าเป็นเลขจำนวนเต็ม 
+   float y =10.5 //เป็นการประกาศตัวแปรว่า y มีค่าเป็นเลขจำนวนจริง
+}
+-ประเภทข้อมูล data type and sizes
+ประเภทข้อมูลที่ใช้เก็บเลขจำนวนเต็ม
+ char ใช้หน่วยความจำ 1 ไบท์
+ int ส่วนใหญ่ใช้หน่วยความจำ 4 ไบท์
+ float ใช้หน่วยความจำ 4 ไบท์
+ double ใช้หน่วยความจำ 8 ไบท์
+ short ช่วยลดพื้นที่จัดเก็บข้อมูล // short int
+ long ช่วยเพิ่ม พื้นที่จัดเก็บข้อมูล // long int
+ signed int มีค่าเหมือนไม่ใส่ คำสั่งนี้ 
+ unsigned  // กำหนดประเภทตัวแปรจำนวนเต็มให้เก็บได้เฉพาะค่าบวก
+
+ -ค่าคงที่เลขฐาน
+ ตัวเลข 0 ตามด้วยจำนวนเต็ม บ่งบอกว่าเป็นเลขฐาน8
+ เช่น 037
+ 0x หรือ 0X บอกว่าเป็นเลขฐาน 16
+ เช่น ox1f หรือ 0X1f
+ 0b หรือ 0B เลขฐาน2
+ เช่น 0b1001
+
+-รูปแบบการพิมพ์
+print format สำหรับเลขฐาน 8 และฐาน 16
+ใช้ %o ในการิมฑืเลลขฐาน8
+ใช้ %x ในการพิมพ์เลขฐาน16
+#include <stdio.h>
+int main (){
+    printf("%d\n",'0'+1);
+    printf("%c\n",'0'+1);
+}
+49
+1
+
+#include <stdio.h>
+int main (){
+    int x = 0b10101111;
+    printf("%o (8)\n",x); // octal
+    printf("%d (10)\n",x); // decimal
+    printf("%x (16)\n",x); // hexadecimal
+    printf("%X (16)\n",x); // hexadecimal
+}
+257(8)
+175(10)
+af(16)
+AF(16)
+
+%c ใช้กับ character
+%d ใช้กับ int 
+%f ใช้กับ float
+%s ใช้กับ string
+
+-operators
+relational
+>
+>=
+<
+<=
+==
+!=
+logical
+|| // or 
+&& // and 
+! // not
+increment and decremeent 
+n++
+++n
+n--
+--n
+bitwise 
+&
+|
+^ excrusive or
+<< left shift
+>> right shift 
+ตัวอย่าง bitwise operators
+0b11110000 & 0b101010 
+0b1010000
